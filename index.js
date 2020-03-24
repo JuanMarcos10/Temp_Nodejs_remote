@@ -9,10 +9,11 @@ const Chance = require('chance');
 const chance = new Chance();
 
 // definir un servidor
-const server = http.createServer(function(request, response){
+const server = http.createServer((request, response) => {
 response.writeHead(200,{'Content-type': 'text/html'});
 response.end(`Wake up, <b>${chance.animal()}</b>. You are <b>${chance.age()}</b> years old.`);
-})
+});
+
 
 // arrancar el servidor (el puerto que sea superior a 1024 para que no requiera uso Administrador)
 server.listen(1337, '127.0.0.1');
