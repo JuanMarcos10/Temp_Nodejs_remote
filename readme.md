@@ -1,12 +1,5 @@
-# NodeJS
-
-Para inicializar el proyecto:
+# How To... Playing with NodeJS
 
 ```shell
-npm install
-```
-
-Para iniciar el servidor
-```shell 
-nodemon
+npm init -y
 ```
