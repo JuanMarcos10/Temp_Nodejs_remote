@@ -15,3 +15,30 @@ a {
   height: 50%;
   max-width: 400px;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+#linksNodeapi {
+    background: #88F5D7;
+    color: #0002FF; 
+    font-size: 16px; 
+    line-height: 16px; 
+    padding: 6px; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    border: 2px solid rgb(28, 110, 164); display: inline-block;
+}
+#linksNodeapi:hover {
+    background: #5AE2F5; 
+    box-shadow: rgb(0, 0, 0) 2px 2px 5px 2px;
+}
+#linksNodeapi:active {
+    background: #144E75; 
+}
