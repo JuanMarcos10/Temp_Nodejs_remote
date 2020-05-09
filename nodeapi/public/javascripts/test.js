@@ -8,14 +8,14 @@ window.onload = function() {
     
     document.getElementById("demo").innerHTML = "This command works in the public & other folders";
     
-    let myArray = ["/", "/otros", "/users", "/hello", "/hello.html"];
+    let myArray = ["home", "otros", "users", "hello", "hello.html"];
     myArray.forEach(myFunction);
     function myFunction(item, index, array) {
         let liNode = document.createElement("li");
         let para = document.createElement("a");
         let node = document.createTextNode(array[index]);
         let att = document.createAttribute("href");
-        att.value = `http://localhost:3000${array[index]}`;
+        att.value = `http://localhost:3000/${array[index]}`;
         para.setAttributeNode(att);
         para.appendChild(node);
         let test = document.getElementById("test");

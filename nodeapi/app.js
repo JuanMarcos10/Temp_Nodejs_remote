@@ -25,6 +25,7 @@ app.locals.title = 'Express';
  * Web app routes
  */
 app.use('/', require('./routes/index'));
+app.use('/home', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/otros', express.static(path.join(__dirname, 'otros')));
 
