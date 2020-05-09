@@ -8,7 +8,7 @@ window.onload = function() {
     
     document.getElementById("demo").innerHTML = "This command works in the public & other folders";
     
-    let myArray = ["home", "otros", "users", "hello", "hello.html"];
+    let myArray = ["home", "users", "hello.html", "other", "hello"];
     myArray.forEach(myFunction);
     function myFunction(item, index, array) {
         let liNode = document.createElement("li");
@@ -22,6 +22,9 @@ window.onload = function() {
         let liNodeNohref = test.appendChild(liNode);
         liNodeNohref.appendChild(para);
     };
+
+/*     let active = document.querySelectorAll("a");
+    console.log(active); */
 };
 
 

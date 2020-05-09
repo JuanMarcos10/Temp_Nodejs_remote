@@ -7,19 +7,25 @@
     <script src="/javascripts/test.js"></script>
   </head>
   <body>
+    <nav>
+      <ul id="test"></ul>
+    </nav>
+    <br>
+    <nav>
+      <p id="demo"></p>
+    </nav>
+
     <h1><%= userTitle %></h1>
-    <p>Welcome to <%= userTitle %> of</p>
-    <br />
     <h2>Learning Web site for NodeJS for users page</h2>
     <p>Done by <%= name %></p>
-    
-    <div>
-      <p id="demo"></p>
-    </div>
 
     <div>
-      <ul id="test"></ul>
-    </div>
+      <p>Click on the button below to download an experience picture</p>
+      <button><a href="http://localhost:3000/download-example">Download</a></button>
+    </div>    
+
+
+
 
   </body>
 </html>

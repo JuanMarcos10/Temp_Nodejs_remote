@@ -27,7 +27,24 @@ app.locals.title = 'Express';
 app.use('/', require('./routes/index'));
 app.use('/home', require('./routes/index'));
 app.use('/users', require('./routes/users'));
-app.use('/otros', express.static(path.join(__dirname, 'otros')));
+app.use('/other', express.static(path.join(__dirname, 'other')));
+/**
+ * All methods can be launched in /secret folder
+ */
+app.all('/secret', function (req, res, next) {
+  console.log('Accessing the secret section ...');
+  next(); // pass control to the next handler
+  },
+  function (req, res) {
+    res.send('Hello from secret folder...');
+});
+
+/**
+ * First download method
+ */
+app.get('/download-example', function (req, res) {
+res.download('./public/images/experiencia.jpg')  
+});
 
 // BASIC METHODS
 /**
@@ -35,13 +52,12 @@ app.use('/otros', express.static(path.join(__dirname, 'otros')));
  */
 app.get('/hello', function (req, res) {
   res.send('Hello You! - This is just an answer from app.js file');
-  // res.location('back');
 });
 
 /**
  * Post Basic Method
  */
-app.post('/', function (req, res) {
+app.post('/user', function (req, res) {
   res.send('Got a POST request');
 });
 
@@ -61,7 +77,7 @@ app.delete('/user', function (req, res) {
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  res.status(404).send('Sorry cant find that! <br> Please enter a valid web page in the browser.');
 });
 
 // error handler
