@@ -19,14 +19,13 @@ window.onload = function() {
         para.setAttributeNode(att);
         para.appendChild(node);
         let test = document.getElementById("test");
-        test.appendChild(liNode);
-        test.appendChild(para);
+        let liNodeNohref = test.appendChild(liNode);
+        liNodeNohref.appendChild(para);
     };
 };
 
 
 /*  ANTIGUO CODIGO PARA LINKS DE MANERA MANUAL SIN ARRAY:
-
     let para = document.createElement("a");
     let node = document.createTextNode("home");
     let att = this.document.createAttribute("href");
