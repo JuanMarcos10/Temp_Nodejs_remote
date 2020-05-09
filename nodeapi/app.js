@@ -34,6 +34,7 @@ app.use('/otros', express.static(path.join(__dirname, 'otros')));
  */
 app.get('/hello', function (req, res) {
   res.send('Hello You! - This is just an answer from app.js file');
+  // res.location('back');
 });
 
 /**
